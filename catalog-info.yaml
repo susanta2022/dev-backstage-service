@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: dev-python-service
+  name: dev-backstage-service
   annotations:
-    github.com/project-slug: susanta2022/dev-python-service
+    github.com/project-slug: susanta2022/dev-backstage-service
 spec:
   type: other
   lifecycle: unknown
