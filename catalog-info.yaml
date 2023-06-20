@@ -6,5 +6,5 @@ metadata:
     github.com/project-slug: susanta2022/dev-backstage-service
 spec:
   type: other
-  lifecycle: lifecycle
+  lifecycle: experimental
   owner: guests
