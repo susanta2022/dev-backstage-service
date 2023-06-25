@@ -1,24 +1,19 @@
 pipeline {
-    agent any
-
+    agent {
+        docker {
+            image 'python:3.9' // Specify the Python version you need
+        }
+    }
+    
     stages {
-        stage('Hello') {
+        // ...
+        
+        stage('Deploy') {
             steps {
-                echo 'Hello World'
+                sh 'python test.py' // Build a Docker image for your application
+                
+               
             }
         }
-        
-        stage('Test'){
-            steps {
-                 echo 'Test World'
-            }
-        }
-        
-        stage('Deployed'){
-            steps {
-                 echo 'Deployed World'
-            }
-        }
-        
     }
 }
