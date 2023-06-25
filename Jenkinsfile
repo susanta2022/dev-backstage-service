@@ -1,14 +1,15 @@
 pipeline {
-    agent any
-    
-    stages {
-        // ...
-        
-        stage('Deploy') {
-            steps {            
-                
-                sh 'docker run --rm -v $PWD:/app -w /app python:3.9 python test.py' // Run the Python file in a Docker container
-            }
-        }
+  agent { docker { image 'python:3.9' } }
+  stages {
+    stage('build') {
+      steps {
+        sh 'pip install boto3'
+      }
     }
+    stage('test') {
+      steps {
+        sh 'python test.py'
+      }   
+    }
+  }
 }
