@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
       steps {
         script {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/susanta2022/dev-backstage-service.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/mast']], userRemoteConfigs: [[url: 'https://github.com/susanta2022/dev-backstage-service.git']]])
         }
       }
     }        
