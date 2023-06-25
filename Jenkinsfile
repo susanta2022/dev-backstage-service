@@ -1,23 +1,12 @@
 pipeline {
-  agent { docker { image 'python:3.9' } }
-  stages {
-    stage('build') {
-       environment
-      {
-        HOME="//$PWD"
-      }
-      steps {
-        sh 'pip install boto3'
-      }
+    agent {
+        docker { image 'node:18.16.0-alpine' }
     }
-    stage('test') {
-      environment
-      {
-        HOME="//$PWD"
-      }
-      steps {
-        sh 'python test.py'
-      }   
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-  }
 }
