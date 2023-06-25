@@ -1,8 +1,16 @@
-stage('build') {
-  node('docker&&windows'){
-    bat 'echo NodeName = %COMPUTERNAME%'
-    docker.image('microsoft/windowsservercore:10.0.14393.206').inside {
-      bat 'echo %COMPUTERNAME% > container_computername.txt'
+pipeline {
+  agent none
+  stages {
+    stage('Docker Test') {
+      agent {
+        dockerfile {
+          filename 'Dockerfile'
+          label 'windocker'
+        }
+      }
+      steps {
+        println 'Hello, World!'
+      }
     }
   }
 }
