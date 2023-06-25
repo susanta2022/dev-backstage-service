@@ -10,7 +10,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh 'python test.py' // Build a Docker image for your application
+                sh 'python tset.py' // Build a Docker image for your application
                 
                 
             }
