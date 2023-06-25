@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.9' // Specify the Python version you need
-        }
-    }
+    agent any
     
     stages {
         // ...
