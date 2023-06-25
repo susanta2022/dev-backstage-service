@@ -5,10 +5,9 @@ pipeline {
         // ...
         
         stage('Deploy') {
-            steps {
-                sh 'docker build -t myapp .' // Build a Docker image for your application
+            steps {            
                 
-                sh 'docker run --name myapp-container myapp python test.py' // Run the Python file in a Docker container
+                sh 'docker run --rm -v $PWD:/app -w /app python:3.9 python test.py' // Run the Python file in a Docker container
             }
         }
     }
