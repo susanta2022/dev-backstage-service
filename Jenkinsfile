@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
        environment
       {
-        HOME="."
+        HOME="//$PWD"
       }
       steps {
         sh 'pip install boto3'
@@ -13,7 +13,7 @@ pipeline {
     stage('test') {
       environment
       {
-        HOME="."
+        HOME="//$PWD"
       }
       steps {
         sh 'python test.py'
