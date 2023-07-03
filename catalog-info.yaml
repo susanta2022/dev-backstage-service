@@ -4,6 +4,7 @@ metadata:
   name: dev-backstage-service
   annotations:
     github.com/project-slug: susanta2022/dev-backstage-service
+    backstage.io/techdocs-ref: value
 spec:
   type: other
   lifecycle: experimental
