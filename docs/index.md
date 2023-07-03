@@ -1,1 +1,1 @@
-[![headline](docs/assets/realbooks.png)](https://realbooks.in/)
+[![headline](./assets/realbooks.png)](https://realbooks.in/)
