@@ -9,3 +9,7 @@ spec:
   type: other
   lifecycle: experimental
   owner: guests
+
+  type: services
+  lifecycle: experimental
+  owner: guests 
