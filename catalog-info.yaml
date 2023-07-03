@@ -6,10 +6,8 @@ metadata:
     github.com/project-slug: susanta2022/dev-backstage-service
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: other
+  type: service
   lifecycle: experimental
-  owner: guests
+  owner: susanta@adansa.com
 
-  type: services
-  lifecycle: experimental
-  owner: guests 
+  
